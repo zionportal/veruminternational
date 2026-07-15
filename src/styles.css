@@ -588,12 +588,12 @@ p {
 }
 
 .programs-section {
-  padding-top: clamp(28px, 3.5svh, 40px);
-  padding-bottom: clamp(24px, 3svh, 32px);
+  padding-top: clamp(32px, 4svh, 44px);
+  padding-bottom: clamp(28px, 3.5svh, 36px);
 }
 
 .programs-section .section-intro {
-  margin-bottom: clamp(12px, 2svh, 18px);
+  margin-bottom: clamp(14px, 2.2svh, 20px);
 }
 
 .programs-section .section-intro h2 {
@@ -609,23 +609,23 @@ p {
 
 .program-card img {
   width: 100%;
-  height: clamp(130px, 15svh, 160px);
+  height: clamp(145px, 17svh, 175px);
   object-fit: cover;
   opacity: 0.82;
 }
 
 .program-body {
-  padding: clamp(14px, 1.5vw, 18px);
+  padding: clamp(16px, 1.8vw, 21px);
 }
 
 .program-body h3 {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   color: var(--vi-white);
 }
 
 .program-body p {
-  margin-bottom: 10px;
-  line-height: 1.35;
+  margin-bottom: 12px;
+  line-height: 1.4;
 }
 
 .text-link {
