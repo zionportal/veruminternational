@@ -126,15 +126,6 @@ const programs = [
     href: "/high-performance-development",
     cta: "View Development Support",
   },
-  {
-    title: "Education and University Pathways",
-    image: pitchAerial,
-    imageAlt: "Football stadium and European city representing education-aware pathway planning",
-    text: "Football pathway support that considers eligibility, academics, recruiting timelines, and long-term education options.",
-    points: ["Academic review", "Timeline support", "Recruiting preparation", "Football and education comparison", "Family decision support"],
-    href: "/education-and-university-pathways",
-    cta: "View Education Pathways",
-  },
 ];
 
 const evaluationDeliverables = [
