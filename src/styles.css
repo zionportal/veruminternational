@@ -393,6 +393,10 @@ p {
   background: var(--vi-white);
 }
 
+.pathway-section {
+  scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
 .comparison-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

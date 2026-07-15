@@ -314,7 +314,7 @@ function CompetitiveDifference() {
 
 function Pathway() {
   return (
-    <section id="pathway" className="section light-section">
+    <section id="pathway" className="section light-section pathway-section">
       <div className="container">
         <SectionIntro
           label="The Verum Pathway"
