@@ -599,15 +599,16 @@ p {
 
 .objective-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 18px 20px;
 }
 
 .objective-card {
   display: flex;
   flex-direction: column;
-  min-height: 250px;
-  padding: 28px;
+  grid-column: span 2;
+  min-height: 220px;
+  padding: 22px 24px;
   border: 1px solid rgba(5, 11, 20, 0.1);
   background: var(--vi-ivory);
   box-shadow: var(--shadow-card);
@@ -620,20 +621,54 @@ p {
 }
 
 .objective-card > svg {
+  width: 26px;
+  height: 26px;
   color: var(--vi-gold);
 }
 
 .objective-card h3 {
-  margin: 22px 0 10px;
+  margin: 14px 0 8px;
 }
 
 .objective-card p {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   font-size: 0.9rem;
 }
 
 .objective-card .text-link {
   margin-top: auto;
+}
+
+.objective-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.objective-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.objective-selector {
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+
+.objective-selector .section-intro {
+  margin-bottom: 20px;
+}
+
+.objective-selector .section-intro .eyebrow {
+  margin-bottom: 10px;
+}
+
+.objective-selector .section-intro h2 {
+  max-width: 820px;
+  margin: 0 auto 12px;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 0.94;
+}
+
+.objective-selector .gold-rule {
+  margin-top: 14px;
 }
 
 .evaluation-section {
@@ -1060,6 +1095,22 @@ details p {
     grid-template-columns: 1fr;
   }
 
+  .objective-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .objective-card,
+  .objective-card:nth-child(4),
+  .objective-card:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .objective-card:nth-child(5) {
+    grid-column: 1 / -1;
+    width: calc(50% - 10px);
+    justify-self: center;
+  }
+
   .deliverable-panel ul {
     grid-template-columns: 1fr;
   }
@@ -1133,6 +1184,13 @@ details p {
   .parent-concerns,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .objective-card,
+  .objective-card:nth-child(4),
+  .objective-card:nth-child(5) {
+    grid-column: auto;
+    width: auto;
   }
 
   .stat {

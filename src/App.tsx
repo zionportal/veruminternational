@@ -351,7 +351,7 @@ function Pathway() {
 
 function ObjectiveSelector() {
   return (
-    <section className="section split-section">
+    <section className="section split-section objective-selector">
       <div className="container">
         <SectionIntro label="Start from where you are" title="Where Are You in Your Football Development?" text="Select the situation that most closely matches what you need now." />
         <div className="objective-grid">
