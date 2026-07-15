@@ -700,7 +700,17 @@ p {
   max-width: 920px;
   margin-right: auto;
   margin-left: auto;
-  font-size: clamp(2.1rem, 4vw, 3.8rem);
+  font-size: clamp(1.9rem, 3.2vw, 3.2rem);
+  line-height: 0.96;
+}
+
+.programs-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.programs-section .section-intro {
+  margin-bottom: 32px;
 }
 
 .program-card {
