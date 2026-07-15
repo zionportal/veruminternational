@@ -281,7 +281,7 @@ function CompetitiveDifference() {
   ];
 
   return (
-    <section id="about" className="section split-section">
+    <section id="about" className="section split-section competitive-section">
       <div className="container">
         <SectionIntro
           label="A better starting point"
