@@ -496,10 +496,9 @@ function FinalCTA() {
     <section id="contact" className="cta-band section-dark">
       <div className="container final-cta">
         <div>
-          <img className="footer-logo" src={logo} alt="Verum International" />
           <p className="eyebrow">Start with clarity</p>
-          <h2>Know the Right Next Step Before Making the Next Investment</h2>
-          <p>Start with a player evaluation and receive a clearer understanding of the player’s current level, development priorities, and most realistic route forward.</p>
+          <h2>Know the Right Next Step Before the Next Investment</h2>
+          <p>Begin with a player evaluation to understand the player’s current level, development priorities, and most realistic path forward.</p>
         </div>
         <div className="hero-actions">
           <a className="button button-gold" href="/apply-for-evaluation" data-event="final_cta_start_pathway">Book a Player Evaluation <ArrowRight size={18} /></a>
