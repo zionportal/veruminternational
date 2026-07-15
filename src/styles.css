@@ -408,29 +408,34 @@ p {
 }
 
 .competitive-section {
-  padding-top: clamp(40px, 5vh, 52px);
-  padding-bottom: clamp(36px, 5vh, 48px);
+  min-height: calc(100svh - var(--header-height));
+  box-sizing: border-box;
+  padding-top: clamp(48px, 5vh, 58px);
+  padding-bottom: clamp(28px, 4vh, 36px);
 }
 
 .competitive-section .section-intro {
-  margin-bottom: 26px;
+  margin-bottom: clamp(20px, 2.5vh, 28px);
 }
 
 .competitive-section .section-intro h2 {
   max-width: 860px;
   margin-right: auto;
   margin-left: auto;
-  font-size: clamp(2.75rem, 3.3vw, 3.75rem);
-  line-height: 1;
+  margin-bottom: 10px;
+  font-size: clamp(2.6rem, 3.1vw, 3.5rem);
+  line-height: 0.96;
 }
 
 .competitive-section .section-intro p:not(.eyebrow) {
   max-width: 800px;
-  margin-top: 18px;
+  margin-top: 14px;
+  margin-bottom: 0;
+  line-height: 1.5;
 }
 
 .competitive-section .gold-rule {
-  margin-top: 14px;
+  margin-top: 10px;
 }
 
 .competitive-section .comparison-grid {
@@ -439,19 +444,20 @@ p {
 }
 
 .competitive-section .comparison-card {
-  padding: 28px 32px;
+  padding: clamp(24px, 3vh, 28px) 30px;
 }
 
 .competitive-section .comparison-card h3 {
-  margin-bottom: 18px;
+  margin-top: 8px;
+  margin-bottom: 16px;
 }
 
 .competitive-section .comparison-card ul {
-  gap: 15px;
+  gap: clamp(12px, 1.8vh, 14px);
 }
 
 .competitive-section .comparison-card li {
-  font-size: 0.92rem;
+  font-size: 1rem;
 }
 
 .competitive-section .comparison-card li svg {
@@ -1098,6 +1104,10 @@ details p {
 }
 
 @media (max-width: 1050px) {
+  .competitive-section {
+    min-height: 0;
+  }
+
   .desktop-nav,
   .nav-cta {
     display: none;
