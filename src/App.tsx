@@ -342,10 +342,10 @@ function Footer() {
           <p>Evaluation-led football development and pathway support for committed players and families.</p>
         </div>
         <div>
-          <h3>Company</h3>
-          <a href="/about">About</a>
-          <a href="/coaches-and-leadership">Coaches and Leadership</a>
-          <a href="/player-stories">Player Stories</a>
+          <h3>Pathway</h3>
+          <a href="/how-it-works">How It Works</a>
+          <a href="/player-evaluation">Player Evaluation</a>
+          <a href="/apply-for-evaluation">Apply for Evaluation</a>
           <a href="/contact"><Mail size={16} /> Contact</a>
         </div>
         <div>
@@ -361,13 +361,18 @@ function Footer() {
           <a href="/for-parents">For Parents</a>
           <a href="/how-it-works">How It Works</a>
           <a href="/faq">FAQ</a>
-          <a href="/safety-and-safeguarding">Safety and Safeguarding</a>
+          <a href="/resources">Resources</a>
+          <a href="/player-stories">Player Stories</a>
         </div>
         <div>
-          <h3>Legal</h3>
+          <h3>Company & Legal</h3>
+          <a href="/coaches-and-leadership">Coaches and Leadership</a>
+          <a href="/network-and-partners">Network and Partners</a>
+          <a href="/contact">Contact</a>
           <a href="/privacy-policy">Privacy Policy</a>
-          <a href="/terms">Terms</a>
+          <a href="/terms-and-conditions">Terms and Conditions</a>
           <a href="/program-policies">Program Policies</a>
+          <a href="/safeguarding">Safeguarding</a>
         </div>
       </div>
       <div className="container footer-bottom">
