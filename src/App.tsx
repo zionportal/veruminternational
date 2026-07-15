@@ -318,7 +318,7 @@ function FinalCTA() {
         </div>
         <div className="hero-actions">
           <a className="button button-gold" href="/apply-for-evaluation" data-event="final_cta_start_pathway">Book a Player Evaluation <ArrowRight size={18} /></a>
-          <a className="button button-outline" href="/for-parents">Ask a Parent Question <CircleHelp size={18} /></a>
+          <a className="text-link final-cta-secondary" href="/for-parents">Ask a Parent Question <CircleHelp size={16} /></a>
         </div>
       </div>
     </section>

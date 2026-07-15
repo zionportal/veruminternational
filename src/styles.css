@@ -671,6 +671,10 @@ p {
   width: 100%;
 }
 
+.final-cta-secondary {
+  justify-content: center;
+}
+
 .faq-section {
   background: #ffffff;
 }
