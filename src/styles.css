@@ -544,6 +544,9 @@ p {
 .programs-section {
   position: relative;
   overflow: hidden;
+  min-height: calc(100svh - var(--header-height));
+  box-sizing: border-box;
+  scroll-margin-top: calc(var(--header-height) + 16px);
   background:
     radial-gradient(circle at 20% 10%, rgba(201, 154, 53, 0.1), transparent 24%),
     linear-gradient(180deg, #07111f, var(--vi-midnight));
@@ -585,12 +588,16 @@ p {
 }
 
 .programs-section {
-  padding-top: 72px;
-  padding-bottom: 72px;
+  padding-top: clamp(40px, 5vh, 56px);
+  padding-bottom: clamp(28px, 4vh, 40px);
 }
 
 .programs-section .section-intro {
-  margin-bottom: 32px;
+  margin-bottom: clamp(18px, 2.5vh, 24px);
+}
+
+.programs-section .section-intro h2 {
+  font-size: clamp(2.1rem, 2.8vw, 2.8rem);
 }
 
 .program-card {
@@ -602,17 +609,23 @@ p {
 
 .program-card img {
   width: 100%;
-  height: 220px;
+  height: clamp(150px, 20vh, 190px);
   object-fit: cover;
   opacity: 0.82;
 }
 
 .program-body {
-  padding: 30px;
+  padding: clamp(18px, 2vw, 24px);
 }
 
 .program-body h3 {
+  margin-bottom: 10px;
   color: var(--vi-white);
+}
+
+.program-body p {
+  margin-bottom: 16px;
+  line-height: 1.45;
 }
 
 .text-link {
@@ -771,6 +784,10 @@ details p {
 }
 
 @media (max-width: 1050px) {
+  .programs-section {
+    min-height: 0;
+  }
+
   .desktop-nav,
   .nav-cta {
     display: none;
