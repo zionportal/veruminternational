@@ -640,7 +640,7 @@ p {
   display: flex;
   min-height: 0;
   align-items: center;
-  padding: 72px 0;
+  padding: 104px 0 72px;
   background: linear-gradient(135deg, var(--vi-deep-blue), var(--vi-midnight));
 }
 
