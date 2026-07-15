@@ -1,7 +1,6 @@
 import {
   ArrowRight,
   Check,
-  ChevronRight,
   CircleHelp,
   Compass,
   FileCheck,
@@ -31,34 +30,6 @@ const trustIndicators = [
   { icon: FileCheck, value: "Evaluation-led", label: "entry" },
   { icon: Target, value: "Player-specific", label: "development" },
   { icon: Shield, value: "Parent communication", label: "included" },
-];
-
-const pathwayStages = [
-  {
-    icon: FileCheck,
-    title: "Player Evaluation",
-    text: "Understand the player’s current level, goals, maturity, academic priorities, and development needs.",
-  },
-  {
-    icon: Target,
-    title: "Development Plan",
-    text: "Identify the technical, tactical, physical, mental, and professional areas that need attention.",
-  },
-  {
-    icon: Compass,
-    title: "Program Selection",
-    text: "Determine whether the next step is development, an academy experience, trial preparation, a showcase, or education-focused support.",
-  },
-  {
-    icon: Trophy,
-    title: "Football Experience",
-    text: "Enter the selected environment with preparation, realistic expectations, and family communication.",
-  },
-  {
-    icon: ChevronRight,
-    title: "Next-Step Review",
-    text: "Review the experience, document development, and determine the next responsible move.",
-  },
 ];
 
 const objectives = [
@@ -100,7 +71,6 @@ const programs = [
     image: pitchAerial,
     imageAlt: "European city and stadium atmosphere representing football pathway opportunities",
     text: "A structured European football experience for committed players seeking stronger training environments, development standards, and education-aware support.",
-    points: ["Evaluation-led entry", "Training environment preparation", "Parent communication", "Post-program review", "Ages 13–23"],
     href: "/programs/european-academy-program",
     cta: "Review the Academy Program",
   },
@@ -109,7 +79,6 @@ const programs = [
     image: heroField,
     imageAlt: "Stadium pitch under floodlights for football showcase preparation",
     text: "Preparation and support for players who may be ready to perform in evaluation settings.",
-    points: ["Readiness review", "Performance preparation", "Player profile support", "Feedback and next steps", "No guaranteed selection"],
     href: "/programs/trials-and-showcases",
     cta: "Understand Trials and Showcases",
   },
@@ -118,7 +87,6 @@ const programs = [
     image: playerTraining,
     imageAlt: "Football player training with focus and intensity",
     text: "Player development focused on the demands athletes must meet before pursuing more competitive environments.",
-    points: ["Technical development", "Tactical understanding", "Physical preparation", "Mental performance", "Professional habits"],
     href: "/high-performance-development",
     cta: "View Development Support",
   },
@@ -315,26 +283,26 @@ function CompetitiveDifference() {
 function Pathway() {
   return (
     <section id="pathway" className="section light-section pathway-section">
-      <div className="container">
-        <SectionIntro
-          label="The Verum Pathway"
-          title="Your Pathway Should Be Clear Before the Journey Begins"
-          text="Verum International does not begin by selling a trip, academy, trial, or showcase. We begin by understanding the player and determining which next step makes sense."
-        />
-        <div className="pathway-grid five-stage-grid">
-          {pathwayStages.map((stage, index) => (
-            <article className="pathway-card" key={stage.title}>
-              <stage.icon size={32} aria-hidden="true" />
-              <span className="step-number">{index + 1}</span>
-              <h3>{stage.title}</h3>
-              <p>{stage.text}</p>
-              {index < pathwayStages.length - 1 && <ChevronRight className="step-arrow" size={34} aria-hidden="true" />}
-            </article>
-          ))}
+      <div className="container pathway-preview">
+        <div className="pathway-preview-copy">
+          <p className="eyebrow">The Verum Pathway</p>
+          <h2>Your Pathway Should Be Clear Before the Journey Begins</h2>
+          <p>Verum International does not begin by selling a trip, academy, trial, or showcase. We begin by understanding the player and determining which next step makes sense.</p>
+          <a className="button button-gold" href="/how-it-works">
+            See How the Process Works <ArrowRight size={18} />
+          </a>
         </div>
-        <a className="button button-gold centered-button" href="/how-it-works">
-          See How the Process Works <ArrowRight size={18} />
-        </a>
+        <div className="pathway-preview-panel">
+          <p className="card-kicker">A player-first process</p>
+          <h3>Evaluation before recommendation.</h3>
+          <p>We review the player, clarify the priorities, identify the right environment, and return to the next responsible move.</p>
+          <div className="pathway-preview-links">
+            <span><FileCheck size={18} aria-hidden="true" /> Understand the starting point</span>
+            <span><Target size={18} aria-hidden="true" /> Build the right preparation</span>
+            <span><Compass size={18} aria-hidden="true" /> Choose the right route</span>
+            <span><Trophy size={18} aria-hidden="true" /> Review what comes next</span>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -407,7 +375,6 @@ function Programs() {
               <div className="program-body">
                 <h3>{program.title}</h3>
                 <p>{program.text}</p>
-                <ul>{program.points.map((point) => <li key={point}><Check size={16} aria-hidden="true" />{point}</li>)}</ul>
                 <a className="text-link" href={program.href} data-event="program_card_click">{program.cta} <ArrowRight size={16} /></a>
               </div>
             </article>
@@ -430,8 +397,9 @@ function Parents() {
           </p>
           <a className="button button-gold" href="/for-parents">Read the Parent Guide <ArrowRight size={18} /></a>
         </div>
-        <div className="parent-concerns">
-          {parentConcerns.map((concern) => <div className="reason" key={concern}><Check size={18} aria-hidden="true" /><span>{concern}</span></div>)}
+        <div className="parent-concerns parent-preview-list">
+          {parentConcerns.slice(0, 6).map((concern) => <div className="reason" key={concern}><Check size={18} aria-hidden="true" /><span>{concern}</span></div>)}
+          <a className="text-link" href="/for-parents">Review the Parent Guide <ArrowRight size={16} /></a>
         </div>
       </div>
     </section>
@@ -444,17 +412,17 @@ function EvidenceAndStories() {
       <div className="container">
         <div className="evidence-block">
           <SectionIntro label="Trust should be visible" title="Clear Evidence. Honest Expectations." text="Families should be able to understand who is involved, what is being provided, and what the player must still earn. Verum International does not rely on vague promises, unexplained logos, or guaranteed-result language." />
-          <div className="evidence-grid">
-            {["Coach credentials", "Program locations", "Real training footage", "Program schedules", "Evaluation examples", "Parent interviews", "Player case studies", "Partner explanations", "Documented outcomes"].map((item) => <div className="evidence-item" key={item}><Shield size={18} aria-hidden="true" />{item}</div>)}
-          </div>
           <p className="pending-note">Verified program, staff, and player information will be published as it is approved.</p>
+          <div className="directory-links">
+            <a className="text-link" href="/coaches-and-leadership">Meet the Team <ArrowRight size={16} /></a>
+            <a className="text-link" href="/player-stories">View Player Stories <ArrowRight size={16} /></a>
+          </div>
         </div>
         <div className="stories-preview">
           <p className="eyebrow">Development in context</p>
           <h2>Real Players. Real Development. Real Next Steps.</h2>
           <p>A useful player story should explain where the player started, what was evaluated, what development was recommended, what experience followed, and what the player is working toward now.</p>
           <div className="pending-story">Player stories are currently being prepared for publication. Each story will include the player’s starting point, evaluation, development process, experience, and current next step.</div>
-          <a className="text-link" href="/player-stories">View Player Stories <ArrowRight size={16} /></a>
         </div>
       </div>
     </section>
@@ -471,7 +439,7 @@ function FAQ() {
           <a className="button button-gold" href="/faq">View All Questions <ArrowRight size={18} /></a>
         </div>
         <div className="faq-list">
-          {faqs.map((faq, index) => (
+          {faqs.slice(0, 3).map((faq, index) => (
             <details key={faq.question} open={index === 0}>
               <summary>{faq.question}</summary>
               <p>{faq.answer}</p>
