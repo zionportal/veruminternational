@@ -375,20 +375,21 @@ function EvaluationPreview() {
       <div className="container split-grid">
         <div>
           <p className="eyebrow">The starting point</p>
-          <h2>Every Pathway Begins With an Honest Evaluation</h2>
+          <h2>Every Pathway Begins With an Honest Player Evaluation</h2>
           <p>
             Before Verum recommends a program, trial, showcase, or international experience, we review the player’s current level, goals, development needs, maturity, academic priorities, timeline, and family expectations.
           </p>
-          <p className="supporting-statement">The purpose of the evaluation is not to tell every player what they want to hear. It is to help the player and family make a better decision.</p>
+          <p className="supporting-statement">An honest evaluation helps the player and family make a better decision—not simply hear the answer they want.</p>
           <div className="hero-actions">
             <a className="button button-gold" href="/apply-for-evaluation" data-event="player_evaluation_request">
               Book a Player Evaluation <ArrowRight size={18} />
             </a>
-            <a className="text-link" href="/player-evaluation">What the Evaluation Includes <ArrowRight size={16} /></a>
           </div>
         </div>
         <div className="deliverable-panel">
-          <p className="card-kicker">Evaluation deliverables</p>
+          <p className="card-kicker">Player Evaluation</p>
+          <h3>What Your Evaluation Includes</h3>
+          <p className="card-intro">Your family receives a practical pathway plan—not just an opinion.</p>
           <ul>
             {evaluationDeliverables.map((item) => <li key={item}><Check size={18} aria-hidden="true" />{item}</li>)}
           </ul>
