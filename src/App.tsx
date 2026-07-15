@@ -2,14 +2,13 @@ import {
   ArrowRight,
   Check,
   ChevronRight,
+  CircleHelp,
   Compass,
+  FileCheck,
   GraduationCap,
   Mail,
-  Map,
   Menu,
-  Plane,
   Shield,
-  Star,
   Target,
   Trophy,
   Users,
@@ -22,95 +21,170 @@ import playerTraining from "./assets/player-training.jpg";
 import logo from "./assets/verum-logo.png";
 
 const navItems = [
-  { label: "About Us", href: "#about" },
-  { label: "Programs", href: "#programs" },
-  { label: "Opportunities", href: "#opportunities" },
-  { label: "Pathway", href: "#pathway" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "The Verum Pathway", href: "/how-it-works" },
+  { label: "Player Evaluation", href: "/player-evaluation" },
+  { label: "Programs", href: "/programs" },
+  { label: "For Parents", href: "/for-parents" },
+  { label: "Player Stories", href: "/player-stories" },
+  { label: "About", href: "/about" },
+  { label: "FAQ", href: "/faq" },
 ];
 
-const stats = [
-  { icon: Map, value: "Global", label: "football pathway guidance" },
-  { icon: Shield, value: "13-23", label: "player age range" },
-  { icon: Target, value: "Evaluation", label: "before opportunity planning" },
-  { icon: Users, value: "Family", label: "communication built in" },
+const trustIndicators = [
+  { icon: Users, value: "Ages 13–23", label: "committed players" },
+  { icon: FileCheck, value: "Evaluation-led", label: "entry" },
+  { icon: Target, value: "Player-specific", label: "development" },
+  { icon: Shield, value: "Parent communication", label: "included" },
 ];
 
-const pathway = [
+const pathwayStages = [
   {
-    icon: Users,
-    title: "Develop",
-    text: "Build technical, tactical, physical, and mental readiness for stronger football environments.",
+    icon: FileCheck,
+    title: "Player Evaluation",
+    text: "Understand the player’s current level, goals, maturity, academic priorities, and development needs.",
   },
   {
     icon: Target,
-    title: "Expose",
-    text: "Understand when a player is ready for relevant evaluation, showcase, or club-adjacent settings.",
-  },
-  {
-    icon: Trophy,
-    title: "Opportunities",
-    text: "Map realistic next steps around age, level, goals, education, and family expectations.",
+    title: "Development Plan",
+    text: "Identify the technical, tactical, physical, mental, and professional areas that need attention.",
   },
   {
     icon: Compass,
-    title: "Achieve",
-    text: "Move forward with a clearer plan, better preparation, and honest pathway guidance.",
+    title: "Program Selection",
+    text: "Determine whether the next step is development, an academy experience, trial preparation, a showcase, or education-focused support.",
+  },
+  {
+    icon: Trophy,
+    title: "Football Experience",
+    text: "Enter the selected environment with preparation, realistic expectations, and family communication.",
+  },
+  {
+    icon: ChevronRight,
+    title: "Next-Step Review",
+    text: "Review the experience, document development, and determine the next responsible move.",
+  },
+];
+
+const objectives = [
+  {
+    icon: FileCheck,
+    title: "I Need an Honest Player Evaluation",
+    text: "I want to understand my current level, strengths, development priorities, and realistic options.",
+    href: "/player-evaluation",
+  },
+  {
+    icon: Trophy,
+    title: "I Want to Prepare for European Football",
+    text: "I need stronger development standards and a plan before entering an international environment.",
+    href: "/high-performance-development",
+  },
+  {
+    icon: Target,
+    title: "I Am Looking for Trials or Showcases",
+    text: "I want to understand whether I am prepared for an evaluation setting and how to perform effectively.",
+    href: "/trials-and-showcases",
+  },
+  {
+    icon: GraduationCap,
+    title: "I Am Comparing Football and Education Options",
+    text: "I need to protect my academic future while pursuing serious football development.",
+    href: "/education-and-university-pathways",
+  },
+  {
+    icon: Users,
+    title: "I Am a Parent Trying to Understand the Process",
+    text: "I need clear information about safety, travel, costs, communication, expectations, and outcomes.",
+    href: "/for-parents",
   },
 ];
 
 const programs = [
   {
-    title: "Europe Academy Program",
+    title: "European Academy Program",
     image: pitchAerial,
     imageAlt: "European city and stadium atmosphere representing football pathway opportunities",
-    text: "A development-centered European football experience for committed players who need structure, standards, and education-aware planning.",
-    points: ["Evaluation-led planning", "Training environment guidance", "Parent communication", "Ages 13-23"],
+    text: "A structured European football experience for committed players seeking stronger training environments, development standards, and education-aware support.",
+    points: ["Evaluation-led entry", "Training environment preparation", "Parent communication", "Post-program review", "Ages 13–23"],
+    href: "/programs/european-academy-program",
+    cta: "Review the Academy Program",
   },
   {
-    title: "Trials & Showcases",
+    title: "Trials and Showcases",
     image: heroField,
     imageAlt: "Stadium pitch under floodlights for football showcase preparation",
-    text: "Short-term opportunities for players who are prepared to perform in evaluation settings and receive practical feedback.",
-    points: ["Readiness review", "Performance preparation", "Feedback and next steps", "No guaranteed outcomes"],
+    text: "Preparation and support for players who may be ready to perform in evaluation settings.",
+    points: ["Readiness review", "Performance preparation", "Player profile support", "Feedback and next steps", "No guaranteed selection"],
+    href: "/programs/trials-and-showcases",
+    cta: "Understand Trials and Showcases",
   },
   {
-    title: "Pathway Guidance",
+    title: "High-Performance Development",
     image: playerTraining,
     imageAlt: "Football player training with focus and intensity",
-    text: "A practical planning service for families comparing academies, camps, trials, education options, and international football routes.",
-    points: ["Player-specific planning", "Family decision support", "Opportunity fit review", "Ongoing guidance"],
+    text: "Player development focused on the demands athletes must meet before pursuing more competitive environments.",
+    points: ["Technical development", "Tactical understanding", "Physical preparation", "Mental performance", "Professional habits"],
+    href: "/high-performance-development",
+    cta: "View Development Support",
+  },
+  {
+    title: "Education and University Pathways",
+    image: pitchAerial,
+    imageAlt: "Football stadium and European city representing education-aware pathway planning",
+    text: "Football pathway support that considers eligibility, academics, recruiting timelines, and long-term education options.",
+    points: ["Academic review", "Timeline support", "Recruiting preparation", "Football and education comparison", "Family decision support"],
+    href: "/education-and-university-pathways",
+    cta: "View Education Pathways",
   },
 ];
 
-const reasons = [
-  "Truthful pathway guidance without guaranteed-contract claims.",
-  "Player-first planning around age, level, goals, and readiness.",
-  "A premium football environment that respects family trust.",
-  "Clear communication before families invest in the wrong opportunity.",
+const evaluationDeliverables = [
+  "Current player profile",
+  "Strengths and development priorities",
+  "Readiness assessment",
+  "Academic and timeline considerations",
+  "Recommended pathway",
+  "Ninety-day action plan",
+];
+
+const parentConcerns = [
+  "Supervision",
+  "Housing",
+  "Transportation",
+  "Meals",
+  "Medical and emergency procedures",
+  "Communication frequency",
+  "Education considerations",
+  "Travel documentation",
+  "Player safeguarding",
+  "Cancellation and refund terms",
+  "What happens when a player is not ready",
+  "What happens after the player returns",
 ];
 
 const faqs = [
   {
     question: "Who is Verum International for?",
-    answer:
-      "Verum International supports committed footballers ages 13-23 and their families who want clearer development planning, European football experience, and honest guidance before pursuing trials, academies, showcases, or pathway opportunities.",
-  },
-  {
-    question: "Does Verum International guarantee trials, scholarships, or contracts?",
-    answer:
-      "Verum International does not guarantee trials, scholarships, contracts, or professional placement. The organization focuses on evaluation-led preparation, pathway clarity, and opportunity readiness where the player's level and goals make sense.",
+    answer: "Verum International supports committed footballers ages 13–23 and their families who want an honest evaluation, player-specific development planning, and credible guidance before pursuing European football opportunities.",
   },
   {
     question: "What happens after a player applies?",
-    answer:
-      "After a player applies, Verum International reviews the player's age, background, goals, current level, and family priorities. The next step is a pathway conversation or evaluation plan that explains realistic options before any larger commitment is made.",
+    answer: "Verum International reviews the player’s background, age, goals, current level, timeline, and family priorities before recommending an evaluation conversation or next step.",
   },
   {
-    question: "Can parents be involved in the process?",
-    answer:
-      "Parents and guardians are central to the Verum International pathway process. Families receive direct communication so football decisions can be made with better context, clearer expectations, and a practical view of the player's next stage.",
+    question: "What does the player evaluation include?",
+    answer: "The evaluation reviews the player profile, strengths, development priorities, readiness, academic and timeline considerations, recommended pathway, and a ninety-day action plan.",
+  },
+  {
+    question: "Does Verum guarantee trials, contracts, scholarships, or placements?",
+    answer: "No. Verum International does not guarantee trials, contracts, scholarships, placements, or professional selection. The process is designed to improve preparation, fit, and decision-making.",
+  },
+  {
+    question: "What happens when a player is not ready?",
+    answer: "Verum International identifies the gaps that should be addressed first and can recommend a development-focused next step rather than placing the player in an environment that is not yet a good fit.",
+  },
+  {
+    question: "How are parents involved?",
+    answer: "Parents and guardians remain informed about the program, responsibilities, costs, risks, expectations, safeguarding, communication, and next steps throughout the pathway process.",
   },
 ];
 
@@ -119,7 +193,7 @@ function Header() {
 
   return (
     <header className="site-header">
-      <a className="brand" href="#top" aria-label="Verum International home">
+      <a className="brand" href="/" aria-label="Verum International home">
         <img src={logo} alt="Verum International" />
       </a>
       <nav className="desktop-nav" aria-label="Primary navigation">
@@ -129,8 +203,8 @@ function Header() {
           </a>
         ))}
       </nav>
-      <a className="button button-gold nav-cta" href="#contact" data-event="nav_apply_now">
-        Apply Now
+      <a className="button button-gold nav-cta" href="/apply-for-evaluation" data-event="nav_apply_now">
+        Book a Player Evaluation
       </a>
       <button className="menu-button" type="button" onClick={() => setOpen(!open)} aria-label="Toggle navigation" aria-expanded={open}>
         {open ? <X size={24} /> : <Menu size={24} />}
@@ -142,8 +216,8 @@ function Header() {
               {item.label}
             </a>
           ))}
-          <a className="button button-gold" href="#contact" onClick={() => setOpen(false)} data-event="nav_apply_now">
-            Apply Now
+          <a className="button button-gold" href="/apply-for-evaluation" onClick={() => setOpen(false)} data-event="nav_apply_now">
+            Book a Player Evaluation
           </a>
         </nav>
       )}
@@ -159,20 +233,20 @@ function Hero() {
       <Header />
       <div className="container hero-grid">
         <div className="hero-copy">
-          <p className="eyebrow">Europe opportunities for talented footballers ages 13-23</p>
-          <h1>Your Talent. Our Network. Global Opportunities.</h1>
+          <p className="eyebrow">Football pathways for committed players ages 13–23</p>
+          <h1>A Clear Football Pathway From Evaluation to Europe</h1>
           <p className="hero-text">
-            Verum International helps committed footballers pursue clearer development, credible European football experiences, and purposeful next steps.
+            Verum International helps committed footballers understand their current level, develop for stronger environments, and pursue credible European football experiences—with their families informed throughout the process.
           </p>
           <div className="hero-actions">
-            <a className="button button-gold" href="#contact" data-event="hero_start_pathway">
-              Start Your Pathway <ArrowRight size={18} />
+            <a className="button button-gold" href="/apply-for-evaluation" data-event="hero_start_pathway">
+              Book a Player Evaluation <ArrowRight size={18} />
             </a>
-            <a className="button button-outline" href="#programs">
-              Explore Programs <ArrowRight size={18} />
+            <a className="button button-outline" href="/how-it-works">
+              See the Verum Pathway <ArrowRight size={18} />
             </a>
           </div>
-          <p className="trust-note">Player-first pathway guidance for committed footballers and families.</p>
+          <p className="trust-note">Evaluation first. Development second. Opportunity when the player is ready.</p>
         </div>
         <div className="hero-player" aria-hidden="true">
           <div className="kit-card">
@@ -182,13 +256,13 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="container stat-bar" aria-label="Verum International trust indicators">
-        {stats.map((stat) => (
-          <div className="stat" key={stat.label}>
-            <stat.icon size={30} aria-hidden="true" />
+      <div className="container stat-bar" aria-label="Verum International process indicators">
+        {trustIndicators.map((indicator) => (
+          <div className="stat" key={indicator.value}>
+            <indicator.icon size={30} aria-hidden="true" />
             <div>
-              <strong>{stat.value}</strong>
-              <span>{stat.label}</span>
+              <strong>{indicator.value}</strong>
+              <span>{indicator.label}</span>
             </div>
           </div>
         ))}
@@ -208,24 +282,95 @@ function SectionIntro({ label, title, text, light = false }: { label: string; ti
   );
 }
 
+function CompetitiveDifference() {
+  const commonApproach = [
+    "Choose a program first.",
+    "Assume exposure creates advancement.",
+    "Treat every player as if they need the same route.",
+    "Focus on the trip more than preparation.",
+    "Leave families uncertain about what follows.",
+  ];
+  const verumApproach = [
+    "Evaluate the player first.",
+    "Identify development priorities.",
+    "Recommend a route based on fit.",
+    "Prepare the player for the environment.",
+    "Review what happened and determine the next step.",
+  ];
+
+  return (
+    <section id="about" className="section split-section">
+      <div className="container">
+        <SectionIntro
+          label="A better starting point"
+          title="Most Programs Begin With a Destination. Verum Begins With the Player."
+          text="A camp, academy, showcase, or international experience is only valuable when it fits the player’s level, goals, maturity, education, and stage of development. Verum International begins by understanding the player before recommending the next investment."
+        />
+        <div className="comparison-grid">
+          <article className="comparison-card common-approach">
+            <p className="card-kicker">The common approach</p>
+            <h3>Destination first</h3>
+            <ul>
+              {commonApproach.map((point) => <li key={point}><Check size={17} aria-hidden="true" />{point}</li>)}
+            </ul>
+          </article>
+          <article className="comparison-card verum-approach">
+            <p className="card-kicker">The Verum approach</p>
+            <h3>Player first</h3>
+            <ul>
+              {verumApproach.map((point) => <li key={point}><Check size={17} aria-hidden="true" />{point}</li>)}
+            </ul>
+          </article>
+        </div>
+        <a className="button button-gold centered-button" href="/how-it-works">
+          Understand the Verum Process <ArrowRight size={18} />
+        </a>
+      </div>
+    </section>
+  );
+}
+
 function Pathway() {
   return (
     <section id="pathway" className="section light-section">
       <div className="container">
         <SectionIntro
           label="The Verum Pathway"
-          title="More Than Football. We Build Futures."
-          text="Verum International provides a clear pathway for dedicated players to develop, compete, and understand the next practical step."
+          title="Your Pathway Should Be Clear Before the Journey Begins"
+          text="Verum International does not begin by selling a trip, academy, trial, or showcase. We begin by understanding the player and determining which next step makes sense."
         />
-        <div className="pathway-grid">
-          {pathway.map((step, index) => (
-            <article className="pathway-card" key={step.title}>
-              <step.icon size={32} aria-hidden="true" />
+        <div className="pathway-grid five-stage-grid">
+          {pathwayStages.map((stage, index) => (
+            <article className="pathway-card" key={stage.title}>
+              <stage.icon size={32} aria-hidden="true" />
               <span className="step-number">{index + 1}</span>
-              <h3>{step.title}</h3>
-              <p>{step.text}</p>
-              {index < pathway.length - 1 && <ChevronRight className="step-arrow" size={34} aria-hidden="true" />}
+              <h3>{stage.title}</h3>
+              <p>{stage.text}</p>
+              {index < pathwayStages.length - 1 && <ChevronRight className="step-arrow" size={34} aria-hidden="true" />}
             </article>
+          ))}
+        </div>
+        <a className="button button-gold centered-button" href="/how-it-works">
+          See How the Process Works <ArrowRight size={18} />
+        </a>
+      </div>
+    </section>
+  );
+}
+
+function ObjectiveSelector() {
+  return (
+    <section className="section split-section">
+      <div className="container">
+        <SectionIntro label="Start from where you are" title="Where Are You in Your Football Development?" text="Select the situation that most closely matches what you need now." />
+        <div className="objective-grid">
+          {objectives.map((objective) => (
+            <a className="objective-card" href={objective.href} key={objective.title}>
+              <objective.icon size={30} aria-hidden="true" />
+              <h3>{objective.title}</h3>
+              <p>{objective.text}</p>
+              <span className="text-link">Explore this pathway <ArrowRight size={16} /></span>
+            </a>
           ))}
         </div>
       </div>
@@ -233,31 +378,29 @@ function Pathway() {
   );
 }
 
-function About() {
+function EvaluationPreview() {
   return (
-    <section id="about" className="section split-section">
+    <section id="player-evaluation" className="section section-dark evaluation-section">
       <div className="container split-grid">
         <div>
-          <p className="eyebrow">Player and family clarity</p>
-          <h2>Development first. Opportunity follows preparation.</h2>
+          <p className="eyebrow">The starting point</p>
+          <h2>Every Pathway Begins With an Honest Evaluation</h2>
           <p>
-            Verum International is an international football development and pathway organization that helps committed footballers ages 13-23 pursue player evaluation, high-performance development, European football experiences, and education-aware opportunity planning.
+            Before Verum recommends a program, trial, showcase, or international experience, we review the player’s current level, goals, development needs, maturity, academic priorities, timeline, and family expectations.
           </p>
-          <div className="reason-list">
-            {reasons.map((reason) => (
-              <div className="reason" key={reason}>
-                <Check size={18} aria-hidden="true" />
-                <span>{reason}</span>
-              </div>
-            ))}
+          <p className="supporting-statement">The purpose of the evaluation is not to tell every player what they want to hear. It is to help the player and family make a better decision.</p>
+          <div className="hero-actions">
+            <a className="button button-gold" href="/apply-for-evaluation" data-event="player_evaluation_request">
+              Book a Player Evaluation <ArrowRight size={18} />
+            </a>
+            <a className="text-link" href="/player-evaluation">What the Evaluation Includes <ArrowRight size={16} /></a>
           </div>
         </div>
-        <div className="image-panel">
-          <img src={playerTraining} alt="Focused football player preparing for a higher performance environment" />
-          <div className="panel-caption">
-            <Star size={18} />
-            <span>Built around readiness, maturity, and the right next step.</span>
-          </div>
+        <div className="deliverable-panel">
+          <p className="card-kicker">Evaluation deliverables</p>
+          <ul>
+            {evaluationDeliverables.map((item) => <li key={item}><Check size={18} aria-hidden="true" />{item}</li>)}
+          </ul>
         </div>
       </div>
     </section>
@@ -270,27 +413,19 @@ function Programs() {
       <div className="container">
         <SectionIntro
           light
-          label="Our Programs"
-          title="Programs Designed for Your Success"
-          text="Flexible pathways for serious players. Choose your direction and Verum International will help you review the route with honesty and purpose."
+          label="Possible routes"
+          title="Programs Selected Around the Player—not the Other Way Around"
+          text="The appropriate route depends on the player’s level, needs, age, timeline, education, and goals."
         />
-        <div className="program-grid">
+        <div className="program-grid four-program-grid">
           {programs.map((program) => (
             <article className="program-card" key={program.title}>
               <img src={program.image} alt={program.imageAlt} loading="lazy" />
               <div className="program-body">
                 <h3>{program.title}</h3>
                 <p>{program.text}</p>
-                <ul>
-                  {program.points.map((point) => (
-                    <li key={point}>
-                      <Check size={16} aria-hidden="true" /> {point}
-                    </li>
-                  ))}
-                </ul>
-                <a className="text-link" href="#contact" data-event="program_card_click">
-                  Request program information <ArrowRight size={16} />
-                </a>
+                <ul>{program.points.map((point) => <li key={point}><Check size={16} aria-hidden="true" />{point}</li>)}</ul>
+                <a className="text-link" href={program.href} data-event="program_card_click">{program.cta} <ArrowRight size={16} /></a>
               </div>
             </article>
           ))}
@@ -300,31 +435,43 @@ function Programs() {
   );
 }
 
-function Opportunities() {
+function Parents() {
   return (
-    <section id="opportunities" className="section light-section proof-section">
+    <section id="parents" className="section light-section">
+      <div className="container split-grid parent-grid">
+        <div>
+          <p className="eyebrow">Built for family confidence</p>
+          <h2>A Football Pathway Parents Can Understand</h2>
+          <p>
+            International football decisions affect more than the player. Verum International keeps parents and guardians informed so families understand the program, responsibilities, costs, risks, expectations, and next steps before making a commitment.
+          </p>
+          <a className="button button-gold" href="/for-parents">Read the Parent Guide <ArrowRight size={18} /></a>
+        </div>
+        <div className="parent-concerns">
+          {parentConcerns.map((concern) => <div className="reason" key={concern}><Check size={18} aria-hidden="true" /><span>{concern}</span></div>)}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function EvidenceAndStories() {
+  return (
+    <section id="player-stories" className="section split-section">
       <div className="container">
-        <SectionIntro
-          label="Real players. Real decisions."
-          title="Opportunity Planning Without Empty Promises."
-          text="Verum International helps players and parents make better football decisions before chasing an academy, trial, showcase, or international route."
-        />
-        <div className="proof-grid">
-          <article className="proof-card">
-            <GraduationCap size={32} />
-            <h3>Education-aware guidance</h3>
-            <p>Football planning should account for school, age, timeline, family priorities, and long-term options.</p>
-          </article>
-          <article className="proof-card featured-proof">
-            <Plane size={32} />
-            <h3>European experience review</h3>
-            <p>Players receive practical guidance about whether a European football experience fits their current stage.</p>
-          </article>
-          <article className="proof-card">
-            <Shield size={32} />
-            <h3>Parent-safe expectations</h3>
-            <p>Verum avoids guaranteed outcome language and keeps the process grounded in readiness and fit.</p>
-          </article>
+        <div className="evidence-block">
+          <SectionIntro label="Trust should be visible" title="Clear Evidence. Honest Expectations." text="Families should be able to understand who is involved, what is being provided, and what the player must still earn. Verum International does not rely on vague promises, unexplained logos, or guaranteed-result language." />
+          <div className="evidence-grid">
+            {["Coach credentials", "Program locations", "Real training footage", "Program schedules", "Evaluation examples", "Parent interviews", "Player case studies", "Partner explanations", "Documented outcomes"].map((item) => <div className="evidence-item" key={item}><Shield size={18} aria-hidden="true" />{item}</div>)}
+          </div>
+          <p className="pending-note">Verified program, staff, and player information will be published as it is approved.</p>
+        </div>
+        <div className="stories-preview">
+          <p className="eyebrow">Development in context</p>
+          <h2>Real Players. Real Development. Real Next Steps.</h2>
+          <p>A useful player story should explain where the player started, what was evaluated, what development was recommended, what experience followed, and what the player is working toward now.</p>
+          <div className="pending-story">Player stories are currently being prepared for publication. Each story will include the player’s starting point, evaluation, development process, experience, and current next step.</div>
+          <a className="text-link" href="/player-stories">View Player Stories <ArrowRight size={16} /></a>
         </div>
       </div>
     </section>
@@ -337,17 +484,12 @@ function FAQ() {
       <div className="container faq-grid">
         <div>
           <p className="eyebrow">Parent and player questions</p>
-          <h2>Clear Answers Before the Next Step.</h2>
-          <p>
-            These answers are written to help families understand Verum International's football pathway process before applying.
-          </p>
-          <a className="button button-gold" href="#contact" data-event="player_evaluation_request">
-            Book a Player Evaluation <ArrowRight size={18} />
-          </a>
+          <h2>Questions Families Should Ask Before Choosing a Football Pathway</h2>
+          <a className="button button-gold" href="/faq">View All Questions <ArrowRight size={18} /></a>
         </div>
         <div className="faq-list">
-          {faqs.map((faq) => (
-            <details key={faq.question} open={faq.question === faqs[0].question}>
+          {faqs.map((faq, index) => (
+            <details key={faq.question} open={index === 0}>
               <summary>{faq.question}</summary>
               <p>{faq.answer}</p>
             </details>
@@ -358,37 +500,20 @@ function FAQ() {
   );
 }
 
-function Contact() {
+function FinalCTA() {
   return (
     <section id="contact" className="cta-band section-dark">
-      <div className="container cta-grid">
+      <div className="container final-cta">
         <div>
           <img className="footer-logo" src={logo} alt="Verum International" />
-          <h2>Ready to Take the Next Step?</h2>
-          <p>Start with a player pathway conversation and learn which route may fit your current level, goals, and timeline.</p>
+          <p className="eyebrow">Start with clarity</p>
+          <h2>Know the Right Next Step Before Making the Next Investment</h2>
+          <p>Start with a player evaluation and receive a clearer understanding of the player’s current level, development priorities, and most realistic route forward.</p>
         </div>
-        <form className="contact-form" action="mailto:info@veruminternational.com" method="post" encType="text/plain">
-          <label>
-            Player or parent name
-            <input name="name" type="text" autoComplete="name" required />
-          </label>
-          <label>
-            Email
-            <input name="email" type="email" autoComplete="email" required />
-          </label>
-          <label>
-            Player age
-            <input name="playerAge" type="text" inputMode="numeric" required />
-          </label>
-          <label>
-            What are you looking for?
-            <textarea name="message" rows={4} placeholder="Evaluation, Europe academy program, trials, pathway guidance, or another question" />
-          </label>
-          <button className="button button-gold" type="submit" data-event="contact_form_submit">
-            Apply Now <ArrowRight size={18} />
-          </button>
-          <p className="form-note">Do not include private medical, passport, or financial information in this first message.</p>
-        </form>
+        <div className="hero-actions">
+          <a className="button button-gold" href="/apply-for-evaluation" data-event="final_cta_start_pathway">Book a Player Evaluation <ArrowRight size={18} /></a>
+          <a className="button button-outline" href="/for-parents">Ask a Parent Question <CircleHelp size={18} /></a>
+        </div>
       </div>
     </section>
   );
@@ -400,30 +525,40 @@ function Footer() {
       <div className="container footer-grid">
         <div>
           <img className="footer-logo" src={logo} alt="Verum International" />
-          <p>Your journey starts here. The world is waiting for your talent.</p>
+          <p>Evaluation-led football development and pathway support for committed players and families.</p>
         </div>
         <div>
           <h3>Company</h3>
-          <a href="#about">About Us</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
+          <a href="/about">About</a>
+          <a href="/coaches-and-leadership">Coaches and Leadership</a>
+          <a href="/player-stories">Player Stories</a>
+          <a href="/contact"><Mail size={16} /> Contact</a>
         </div>
         <div>
-          <h3>Programs</h3>
-          <a href="#programs">Europe Academy Program</a>
-          <a href="#programs">Trials & Showcases</a>
-          <a href="#programs">Pathway Guidance</a>
+          <h3>Pathways</h3>
+          <a href="/player-evaluation">Player Evaluation</a>
+          <a href="/programs/european-academy-program">European Academy Program</a>
+          <a href="/programs/trials-and-showcases">Trials and Showcases</a>
+          <a href="/high-performance-development">High-Performance Development</a>
+          <a href="/education-and-university-pathways">Education and University Pathways</a>
         </div>
         <div>
-          <h3>Contact</h3>
-          <a href="mailto:info@veruminternational.com" data-event="email_click">
-            <Mail size={16} /> info@veruminternational.com
-          </a>
+          <h3>Families</h3>
+          <a href="/for-parents">For Parents</a>
+          <a href="/how-it-works">How It Works</a>
+          <a href="/faq">FAQ</a>
+          <a href="/safety-and-safeguarding">Safety and Safeguarding</a>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms</a>
+          <a href="/program-policies">Program Policies</a>
         </div>
       </div>
       <div className="container footer-bottom">
         <span>© 2026 Verum International. All rights reserved.</span>
-        <span>Player pathways are evaluation-led and do not guarantee contracts, scholarships, trials, or placements.</span>
+        <span>Verum International provides evaluation-led football development and pathway support. Participation does not guarantee trials, scholarships, contracts, placements, or professional selection.</span>
       </div>
     </footer>
   );
@@ -433,12 +568,15 @@ function App() {
   return (
     <>
       <Hero />
-      <About />
+      <CompetitiveDifference />
       <Pathway />
+      <ObjectiveSelector />
+      <EvaluationPreview />
       <Programs />
-      <Opportunities />
+      <Parents />
+      <EvidenceAndStories />
       <FAQ />
-      <Contact />
+      <FinalCTA />
       <Footer />
     </>
   );
