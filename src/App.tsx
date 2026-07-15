@@ -21,13 +21,9 @@ import playerTraining from "./assets/player-training.jpg";
 import logo from "./assets/verum-logo.png";
 
 const navItems = [
-  { label: "The Verum Pathway", href: "/how-it-works" },
-  { label: "Player Evaluation", href: "/player-evaluation" },
-  { label: "Programs", href: "/programs" },
-  { label: "For Parents", href: "/for-parents" },
-  { label: "Player Stories", href: "/player-stories" },
-  { label: "About", href: "/about" },
-  { label: "FAQ", href: "/faq" },
+  { label: "The Verum Pathway", href: "#pathway" },
+  { label: "Player Evaluation", href: "#player-evaluation" },
+  { label: "Programs", href: "#programs" },
 ];
 
 const trustIndicators = [
