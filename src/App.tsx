@@ -219,9 +219,6 @@ function Header() {
 function Hero() {
   return (
     <section id="top" className="hero section-dark">
-      <img className="hero-bg" src={heroField} alt="Football pitch under stadium lights" />
-      <div className="hero-shade" />
-      <Header />
       <div className="container hero-grid">
         <div className="hero-copy">
           <p className="eyebrow">Football pathways for committed players ages 13–23</p>
@@ -239,12 +236,8 @@ function Hero() {
           </div>
           <p className="trust-note">Evaluation first. Development second. Opportunity when the player is ready.</p>
         </div>
-        <div className="hero-player" aria-hidden="true">
-          <div className="kit-card">
-            <Shield size={42} />
-            <span>VERUM</span>
-            <strong>7</strong>
-          </div>
+        <div className="hero-player">
+          <img className="hero-player-image" src={heroField} alt="Football pitch under stadium lights" />
         </div>
       </div>
       <div className="container stat-bar" aria-label="Verum International process indicators">
@@ -558,6 +551,7 @@ function Footer() {
 function App() {
   return (
     <>
+      <Header />
       <Hero />
       <CompetitiveDifference />
       <Pathway />
