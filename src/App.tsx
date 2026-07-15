@@ -218,28 +218,30 @@ function Header() {
 
 function Hero() {
   return (
-    <section id="top" className="hero section-dark">
-      <div className="container hero-grid">
-        <div className="hero-copy">
-          <p className="eyebrow">Football pathways for committed players ages 13–23</p>
-          <h1>A Clear Football Pathway From Evaluation to Europe</h1>
-          <p className="hero-text">
-            Verum International helps committed footballers understand their current level, develop for stronger environments, and pursue credible European football experiences—with their families informed throughout the process.
-          </p>
-          <div className="hero-actions">
-            <a className="button button-gold" href="/apply-for-evaluation" data-event="hero_start_pathway">
-              Book a Player Evaluation <ArrowRight size={18} />
-            </a>
-            <a className="button button-outline" href="/how-it-works">
-              See the Verum Pathway <ArrowRight size={18} />
-            </a>
+    <>
+      <section id="top" className="hero section-dark">
+        <div className="container hero-grid">
+          <div className="hero-copy">
+            <p className="eyebrow">Football pathways for committed players ages 13–23</p>
+            <h1>A Clear Football Pathway From Evaluation to Europe</h1>
+            <p className="hero-text">
+              Verum International helps committed footballers understand their current level, develop for stronger environments, and pursue credible European football experiences—with their families informed throughout the process.
+            </p>
+            <div className="hero-actions">
+              <a className="button button-gold" href="/apply-for-evaluation" data-event="hero_start_pathway">
+                Book a Player Evaluation <ArrowRight size={18} />
+              </a>
+              <a className="button button-outline" href="/how-it-works">
+                See the Verum Pathway <ArrowRight size={18} />
+              </a>
+            </div>
+            <p className="trust-note">Evaluation first. Development second. Opportunity when the player is ready.</p>
           </div>
-          <p className="trust-note">Evaluation first. Development second. Opportunity when the player is ready.</p>
+          <div className="hero-player">
+            <img className="hero-player-image" src={heroField} alt="Football pitch under stadium lights" />
+          </div>
         </div>
-        <div className="hero-player">
-          <img className="hero-player-image" src={heroField} alt="Football pitch under stadium lights" />
-        </div>
-      </div>
+      </section>
       <div className="container stat-bar" aria-label="Verum International process indicators">
         {trustIndicators.map((indicator) => (
           <div className="stat" key={indicator.value}>
@@ -251,7 +253,7 @@ function Hero() {
           </div>
         ))}
       </div>
-    </section>
+    </>
   );
 }
 
