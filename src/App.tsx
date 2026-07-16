@@ -22,6 +22,10 @@ import heroField from "./assets/hero-field.jpg";
 import pitchAerial from "./assets/pitch-aerial.jpg";
 import playerTraining from "./assets/player-training.jpg";
 import logo from "./assets/verum-logo.png";
+import pathwayMap from "./assets/pathway-map.svg";
+import evaluationBoard from "./assets/evaluation-board.svg";
+import familyCompass from "./assets/family-compass.svg";
+import processRoute from "./assets/process-route.svg";
 
 const navItems = [
   { label: "The Verum Pathway", href: "/how-it-works" },
@@ -190,7 +194,7 @@ function CompetitiveDifference() {
           <a className="button button-gold" href="/how-it-works">Understand the Verum Process <ArrowRight size={18} /></a>
         </div>
         <figure className="split-preview-media">
-          <img src={pitchAerial} alt="Football stadium representing the destination a player may pursue" loading="lazy" />
+          <img src={pathwayMap} alt="Verum pathway map connecting development, exposure, opportunity, and the next step" loading="lazy" />
           <figcaption>Destination follows preparation.</figcaption>
         </figure>
       </div>
@@ -203,7 +207,7 @@ function Pathway() {
     <section id="pathway" className="section light-section pathway-section split-preview">
       <div className="container split-preview-grid split-preview-reverse">
         <figure className="split-preview-media">
-          <img src={playerTraining} alt="Football player preparing in a focused training environment" loading="lazy" />
+          <img src={processRoute} alt="Five-stage Verum process route from evaluation to review and the next step" loading="lazy" />
           <figcaption>A clear process before the next step.</figcaption>
         </figure>
         <div className="split-preview-copy">
@@ -237,7 +241,7 @@ function EvaluationPreview() {
           </div>
         </div>
         <figure className="split-preview-media">
-          <img src={heroField} alt="Stadium pitch representing a player evaluation pathway" loading="lazy" />
+          <img src={evaluationBoard} alt="Player evaluation board showing readiness, priorities, and a recommended next step" loading="lazy" />
           <figcaption>Evaluation first. Development second. Opportunity when the player is ready.</figcaption>
         </figure>
       </div>
@@ -277,7 +281,7 @@ function Parents() {
     <section id="parents" className="section light-section split-preview">
       <div className="container split-preview-grid split-preview-reverse">
         <figure className="split-preview-media">
-          <img src={pitchAerial} alt="Football environment representing family-supported pathway planning" loading="lazy" />
+          <img src={familyCompass} alt="Family pathway compass showing the questions to review before commitment" loading="lazy" />
           <figcaption>Families stay informed throughout the process.</figcaption>
         </figure>
         <div className="split-preview-copy">
@@ -373,6 +377,7 @@ function Footer() {
           <a href="/terms-and-conditions">Terms and Conditions</a>
           <a href="/program-policies">Program Policies</a>
           <a href="/safeguarding">Safeguarding</a>
+          <a href="/sitemap.xml">Sitemap</a>
         </div>
       </div>
       <div className="container footer-bottom">
